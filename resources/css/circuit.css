@@ -1,0 +1,33 @@
+.circuit-page h2 {
+    font-weight: 600;
+    background-image: radial-gradient(circle, #553c9a, #ee4b2b);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-align: center;
+    margin-bottom: 40px;
+
+}
+
+.point-fort {
+    display: flex;
+    justify-content: center;
+}
+
+.circuit-page li {
+    opacity: 0.91;
+    font-size: 0.9rem;
+}
+
+.circuit-page .aside.card {
+    border: none;
+    background-color: #fff;
+    box-shadow: 7px 11px 10px -13px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 7px 11px 10px -13px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 7px 11px 10px -13px rgba(0, 0, 0, 0.75);
+}
+
+.circuit-page .aside.card h6 a {
+    color: inherit;
+    opacity: 0.9;
+}

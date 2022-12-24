@@ -1,0 +1,7 @@
+@import url('./style.css');
+@import url('./circuit.css');
+@import url('./login.css');
+@import url('./admin.css');
+@import url('../bootstrap/css/bootstrap.min.css');
+@import url('../font/css/all.min.css');
+@import "~aos/dist/aos.css";

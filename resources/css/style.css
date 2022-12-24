@@ -1,0 +1,480 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+
+a {
+    text-decoration: none !important;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-color: #fff;
+    --text-color: #221314;
+    --second-color: #5a7184;
+    --main-color: #6e54fa;
+    --green-color: #23d45e;
+    --big-font: 6rem;
+    --h2-font: 3rem;
+    --p-font: 1.0rem;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif !important;
+    position: relative;
+    background: rgb(247, 247, 246) !important;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 5px 14%;
+    transition: ease .40s;
+}
+
+.logo {
+    font-size: 35px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--bg-color);
+}
+
+.logo span {
+    color: var(--green-color);
+}
+
+.navbar {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar a {
+    color: var(--bg-color);
+    font-size: var(--p-font);
+    font-weight: 500;
+    padding: 10px 22px;
+    border-radius: 4px;
+    transition: ease .40s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    background: var(--bg-color);
+    color: var(--text-color);
+    box-shadow: 5px 10px 30px rgb(85 85 85 / 20%);
+    border-radius: 4px;
+}
+
+#menu-icon {
+    color: var(--bg-color);
+    font-size: 35px;
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+
+.header.sticky {
+    background: var(--bg-color);
+    padding: 10px 14%;
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+}
+
+.header.sticky #menu-icon {
+    color: #333232;
+}
+
+.sticky .logo {
+    color: var(--text-color);
+}
+
+.sticky .navbar a {
+    color: var(--text-color);
+}
+
+/* #header .skew-header {
+    width: 100%;
+    height: 290px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 999;
+    transform: skew(0deg, -5deg) translateY(100px);
+} */
+
+#header .carousel-indicators {
+    bottom: 20px;
+    z-index: 999 !important;
+}
+
+#header .carousel-indicators li {
+    width: 12px;
+    height: 12px;
+    margin-left: 5px;
+
+}
+
+#header .top-carousel .banner-content {
+    position: absolute;
+    width: 100%;
+    z-index: 998;
+    text-align: center;
+    top: 150px;
+    color: #fff;
+    padding: 10px 40px;
+}
+
+#header .top-carousel .banner-content h1 {
+    font-size: 64px;
+    font-weight: bold;
+}
+
+#header .carousel-item {
+    position: relative;
+}
+
+.carousel-item img {
+    height: 100vh;
+    object-fit: cover;
+    display: block !important;
+}
+
+#header .carousel-item::after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to top, rgba(255, 0, 0, 0) 0%, rgba(25, 56, 34, 0.45) 100%);
+}
+
+.btn-more {
+    background: transparent !important;
+    color: white !important;
+    border: 2px solid white !important;
+}
+
+.btn-more:hover {
+    background-color: #fff !important;
+    color: #333232 !important;
+}
+
+
+
+a.btn {
+    padding: 10px 30px;
+    background: #f7cc4b;
+    color: #333;
+    border-radius: 50px;
+    border: 2px solid #34495e;
+    text-transform: uppercase;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 16px;
+}
+
+
+@keyframes shadow-pulse {
+    0% {
+        box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.2);
+    }
+
+    100% {
+        box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
+    }
+}
+
+#header .learn-today {
+    animation: shadow-pulse 2s infinite;
+}
+
+#header .learn-today:hover {
+    animation: none;
+}
+
+
+.adjust {
+    margin-left: -18px;
+}
+
+@media screen and (max-width: 1200px) {
+
+    .header,
+    .header.sticky {
+        padding: 5px 5%;
+    }
+}
+
+@media screen and (max-width: 946px) {
+    .header .navbar {
+        display: none;
+    }
+
+    .header .navbar.active {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        top: -100%;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: var(--bg-color);
+        height: 100vh;
+        animation: showMenu 400ms ease forwards;
+    }
+
+    @keyframes showMenu {
+        to {
+            top: 0;
+        }
+    }
+
+    .navbar li {
+        padding-top: 30px;
+    }
+
+    .navbar a {
+        color: var(--text-color);
+    }
+
+    #menu-icon {
+        display: block;
+    }
+
+    #header .top-carousel .banner-content h1 {
+        font-size: 30px;
+    }
+}
+
+/****
+Container
+**/
+p,
+p div {
+    font-size: 0.9rem !important;
+    text-align: justify !important;
+    opacity: 0.85 !important;
+}
+
+h3.title {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 35px;
+    opacity: 0.85;
+}
+
+h3.title::after {
+    content: '';
+    display: inherit;
+    width: 10%;
+    margin: 0px auto;
+    border-top: 3px solid var(--green-color);
+}
+
+/**
+welc-about, welcome
+**/
+
+.welc-about .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.welc-about .text {
+    width: 48%;
+}
+
+.welc-about .text h5 {
+    color: var(--green-color);
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
+.welc-about .content .img {
+    width: 48%;
+}
+
+.welc-about .content .img img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.welc-about ul li {
+    font-size: 0.9rem;
+    opacity: 0.85;
+}
+
+.welc-about ul li img {
+    width: 25px;
+    height: auto;
+}
+
+@media screen and (max-width: 996px) {
+    .welc-about .content {
+        display: block;
+    }
+
+    .welc-about .text {
+        width: 100%;
+    }
+
+    .welc-about .content .img {
+        width: 100%;
+    }
+
+}
+
+/***
+Contact
+***/
+
+.contact .card-content {
+    display: flex;
+    border: none;
+    width: 100%;
+    justify-content: center;
+}
+
+.contact ._card {
+    border: none;
+    display: flex;
+    width: 85%;
+    background-color: #fff;
+    box-shadow: 0px 2px 13px -2px rgba(0, 0, 0, 0.38);
+    -webkit-box-shadow: 0px 2px 13px -2px rgba(0, 0, 0, 0.38);
+    -moz-box-shadow: 0px 2px 13px -2px rgba(0, 0, 0, 0.38);
+}
+
+.contact .form {
+    padding: 20px;
+    width: 60%;
+}
+
+.contact .form input,
+.contact .form textarea {
+    border: none;
+    border-bottom: 1px solid #929292;
+}
+
+.contact .form label {
+    text-transform: uppercase;
+    font-weight: 700;
+    opacity: 0.8;
+}
+
+.contact .contact-us {
+    padding: 20px;
+    width: 40%;
+    background-color: #52be6d;
+}
+
+.contact .contact-us h4 {
+    font-size: 35px;
+    text-transform: uppercase;
+    padding-bottom: 45px;
+    color: #fff;
+}
+
+.contact .contact-us p {
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.contact .contact-us p i {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 790px) {
+    .contact ._card {
+        display: block;
+    }
+
+    .contact .contact-us {
+        width: 100%;
+    }
+
+    .contact .form {
+        width: 100%;
+    }
+}
+
+/***
+circuits
+**/
+.circuits .content .card .card-body,
+.circuit-page .card .card-body {
+    height: 100px;
+}
+
+.circuits .content .card .card-body .title,
+.circuit-page .card .card-body .title {
+    font-weight: 600;
+}
+
+.circuits .content .card .card-body .title a,
+.circuit-page .card .card-body .title a {
+    color: inherit;
+}
+
+/**
+Footer
+**/
+footer {
+    background: var(--bg-color);
+    box-shadow: -1px -3px 12px -8px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -1px -3px 12px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px -3px 12px -8px rgba(0, 0, 0, 0.75);
+}
+
+footer .links a {
+    color: inherit;
+    text-transform: uppercase;
+    opacity: 0.91;
+}
+
+footer .copyright p {
+    opacity: 0.71;
+}
+
+/***
+    settings
+
+**/
+
+.card img {
+    height: 200px !important;
+    object-fit: cover !important;
+}
+
+@media screen and (max-width: 991px) {
+    .circuits .card {
+        width: 100%;
+    }
+}
